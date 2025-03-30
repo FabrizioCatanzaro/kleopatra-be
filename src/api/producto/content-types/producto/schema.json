@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Producto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "productoNombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "productoNombre"
+    },
+    "productoCodigo": {
+      "type": "string"
+    },
+    "productoFoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "productoStock": {
+      "type": "boolean",
+      "default": true
+    },
+    "productoPrecio": {
+      "type": "integer"
+    },
+    "productoTipo": {
+      "type": "enumeration",
+      "enum": [
+        "Anillos",
+        "Abridores",
+        "Argollas",
+        "Aros",
+        "Cuff",
+        "Collares",
+        "Cadenas",
+        "Dijes",
+        "Pulseras"
+      ]
+    },
+    "esDestacado": {
+      "type": "boolean"
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria"
+    }
+  }
+}
