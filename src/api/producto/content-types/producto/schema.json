@@ -19,7 +19,8 @@
       "targetField": "productoNombre"
     },
     "productoCodigo": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "productoFoto": {
       "type": "media",
@@ -49,6 +50,7 @@
         "Cuff",
         "Collares",
         "Cadenas",
+        "Conjuntos",
         "Dijes",
         "Pulseras"
       ]

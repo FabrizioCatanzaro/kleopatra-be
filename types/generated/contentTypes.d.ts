@@ -427,7 +427,7 @@ export interface ApiProductoProducto extends Struct.CollectionTypeSchema {
       'api::producto.producto'
     > &
       Schema.Attribute.Private;
-    productoCodigo: Schema.Attribute.String;
+    productoCodigo: Schema.Attribute.String & Schema.Attribute.Unique;
     productoFoto: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -443,6 +443,7 @@ export interface ApiProductoProducto extends Struct.CollectionTypeSchema {
         'Cuff',
         'Collares',
         'Cadenas',
+        'Conjuntos',
         'Dijes',
         'Pulseras',
       ]
